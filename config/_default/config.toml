@@ -25,6 +25,3 @@ series = "series"# 取消以下行的注释以启用 Google Analytics 跟踪
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
-[params]
-mobileNavigation = "left" # 移动导航菜单将打开到屏幕左侧。
-#bile nav menu will open to the left of the screen.
