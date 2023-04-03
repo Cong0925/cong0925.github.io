@@ -1,6 +1,6 @@
 # 将 `baseurl` 设置为您的根域名
 # 如果将其设置为“/”，则在生产中共享图标将无法正常工作
-baseurl = "https://cong0925.github.io/"  # 包括尾部斜杠
+baseurl = "https://myBlog.github.io/"  # 包括尾部斜杠
 # title = "Clarity"  # 直接从 config/_default/languages.toml 编辑 # 或者取消注释此行并从上述文件中删除 `title` 条目。
 copyright = "版权所有 © 2008–2018，Steve Francia 和 Hugo 作者；保留所有权利。"
 # canonifyurls = true
