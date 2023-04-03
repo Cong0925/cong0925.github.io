@@ -1,7 +1,7 @@
 [goldmark]
   [goldmark.renderer]
     hardWraps = false
-    unsafe = true # change to false to disable inclusion of rawHTML and math functions
+    unsafe = true # 将其更改为false以禁用原始HTML和数学函数的包含
     xhtml = false
   [goldmark.extensions]
     typographer = false
@@ -10,8 +10,8 @@
     guessSyntax = true
     hl_Lines = "--"
     lineNoStart = 1
-    lineNos = true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
-    lineNumbersInTable = false # toggling this on (i.e to true) or deleting this line will break the code blocks functionality. Will
+    lineNos = true # 始终设置为true # 否则行号将根本不显示！即使您在UI中切换它们也是如此
+    lineNumbersInTable = false # 将其切换为true（即为true）或删除此行将破坏代码块功能。将
     noClasses = false
     # style = "monokai"
     tabWidth = 2

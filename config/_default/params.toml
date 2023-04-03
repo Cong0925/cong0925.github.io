@@ -1,150 +1,150 @@
-# enable search
+# 启用搜索
 enableSearch = true
 
-# socials
+# 社交媒体
 twitter = "@janedoe"
-largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
-introDescription = "Technologist, perpetual student, teacher, continual incremental improvement."
-# introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
-# description = "A theme based on VMware's Clarity Design System for publishing technical blogs with Hugo." # Set your site's meta tag (SEO) description here. Alternatively set this description in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
-# keywords = ["design", "clarity", "hugo theme"] # Set your site's meta tag (SEO) keywords here. Alternatively set these in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
+largeTwitterCard = false # 如果要显示大的 Twitter 卡片图像，请设置为 true。默认为小的 Twitter 卡片图像
+introDescription = "技术专家，永久学生，教师，不断的渐进式改进。"
+# introURL = "about/" # 设置“阅读更多”按钮下面的 introDescription 的 URL，或将其设置为 false 以不显示该按钮
+# description = "A theme based on VMware's Clarity Design System for publishing technical blogs with Hugo." # 在此处设置您网站的元标记（SEO）描述。或者在主页内容文件中设置此描述，例如 content/_index.md。以后者设置的内容为优先。
+# keywords = ["design", "clarity", "hugo theme"] # 在此处设置您网站的元标记（SEO）关键字。或者在主页内容文件中设置这些关键字，例如 content/_index.md。以后者设置的内容为优先。
 
-# showShare = false # Uncomment to not show share buttons on each post. Also available in each post's front matter.
+# showShare = false # 取消注释以在每篇文章上不显示共享按钮。也可在每篇文章的前置元数据中使用。
 
-# Google analytics Id
+# Google 分析 ID
 ga_analytics = ""
 
-# Google tag manager
+# Google 标签管理器
 google_tag_manager_id = ""
 
-# Baidu analytics Id
+# 百度分析 ID
 # baidu_analytics = "XXXXXXXX"
 
-# limit the number of taxonomies links shown on the sidebar of each page by default.
-numberOfTagsShown = 14 # Applies for all other default & custom taxonomies. e.g categories, brands see https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
+# 默认情况下限制在每个页面的侧边栏上显示的分类链接数。
+numberOfTagsShown = 14 # 适用于所有其他默认和自定义分类法。例如类别、品牌，请参见 https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
 
-# Whether to default to storing images and other assets in the `static` directory, or use Hugo page bundles.
-# Switch to `true` if you'd like to group assets with the post itself (as a "leaf bundle").
-# This can be overridden at the page level; what is set below acts as the default if no page variable is set.
-# Details on page bundles: https://gohugo.io/content-management/page-bundles/#leaf-bundles
+# 是否默认将图像和其他资产存储在“静态”目录中，或使用 Hugo 页面包。
+# 如果您想将资产与帖子本身分组（作为“叶子包”），请切换为“true”。
+# 这可以在页面级别上覆盖；如果没有设置页面级别变量，则下面设置的内容将作为默认值。
+# 有关页面包的详细信息：https://gohugo.io/content-management/page-bundles/#leaf-bundles
 usePageBundles = false
 
-# Path variables
+# 路径变量
 #
-# By default, each of these directories are children of the `static` directory.
+# 默认情况下，这些目录都是“静态”目录的子目录。
 #
-# In some Apache server installs, these directory names could conflict and you
-# may want to change them. See:
+# 在某些 Apache 服务器安装中，这些目录名称可能会发生冲突，您可能希望更改它们。请参见：
 # https://github.com/chipzoller/hugo-clarity/issues/74
 #
-# If you change the names of these directories, be sure to copy the contents of
-# the originals to get the files included with Hugo Clarity.
+# 如果更改这些目录的名称，请务必复制原始内容以获取包含在 Hugo Clarity 中的文件。
 #
-# Images:
-imagesDir = "images/" # without a leading forward slash
-# Icons:
-iconsDir = "icons/" # without a leading forward slash
-# Fonts:
-fontsDir = "fonts/" # without a leading forward slash
+# 图像：
+imagesDir = "images/" # 没有前导正斜杠
+# 图标：
+iconsDir = "icons/" # 没有前导正斜杠
+# 字体：
+fontsDir = "fonts/" # 没有前导正斜杠
 
-# Social media sharing image: Will be used on Twitter, Facebook, LinkedIn, etc.
-# when a given page has no other image present.
+# 社交媒体共享图像：当给定页面没有其他图像时，将在 Twitter、Facebook、LinkedIn 等上使用。
 fallBackOgImage = "images/thumbnail.png"
 
 # Logo image
 logo = "logos/logo.png"
 
 # center logo on navbar
-centerLogo = false # Set to "true" for centering or "false" for left aligned.
+centerLogo = false # 设置为“true”以居中，设置为“false”以左对齐。
 
-# sets the maximum number of lines per codeblock. The codeblock will however be scrollable and expandable.
+# 设置每个代码块的最大行数。但是，代码块将是可滚动和可扩展的。
 codeMaxLines = 7
 
-# disable showing line numbers by default. Switch to `true` if you'd rather have them on.
+# 默认情况下禁用显示行号。如果您希望打开它们，请切换到“true”。
 codeLineNumbers = false
 
-# enable math notation. Switch to `true` to enable mathjax in your site.
+# 启用数学符号。切换到“true”以在您的站点中启用 mathjax。
 enableMathNotation = false
 
-# directory(s) where your articles are located
-mainSections = ["post"] # see config details here https://gohugo.io/functions/where/#mainsections
+# 您的文章所在的目录
+mainSections = ["post"] # 详细信息请参见 https://gohugo.io/functions/where/#mainsections
 
-# Label Non inline images on an article body
-figurePositionShow = false # toggle on or off globally
-# you can toggle this behaviour on or off on per page using the same variable inside your articles frontmatter
-figurePositionLabel = "Figure" # the text before image number e.g Figure 1.0
+# 在文章正文中标记非内联图像
+figurePositionShow = false # 全局切换打开或关闭
+# 您可以在每篇文章中使用相同的变量切换此行为打开或关闭
+figurePositionLabel = "Figure" # 图像编号前的文本，例如 Figure 1.0
 
-# Set the collapsed mobile navigation to either appear from the left or the right
-mobileNavigation = "left" # if you prefer right change to 'right'
+# 将折叠的移动导航设置为从左侧或右侧出现
+mobileNavigation = "left" # 如果您喜欢右侧，请更改为“right”
 
-# some site owners want to decide how they would like their sites to be introduced users. These settings give you as a site owner to decide how the user will view your site for the first time.
+# 一些网站所有者希望决定他们希望如何向用户介绍他们的网站。这些设置为您作为网站所有者决定用户将如何首次查看您的网站。
 
-# please note that you cannot enforce both modes at the same time. i.e by enforcing one mode, you priotise it over the other (by setting it to true). enforceDarkMode will be commented out
+# 请注意，您不能同时强制执行两种模式。即通过强制执行一种模式，您优先考虑它（通过将其设置为 true）。enforceDarkMode 将被注释掉
 
-# please also not that mode toggle UI will remain in place. That way, if a user prefers darkmode, they can have their way.
+# 请注意，模式切换 UI 将保持不变。这样，如果用户喜欢暗模式，他们可以随心所欲。
 
 enforceLightMode = false
 # enforceDarkMode = false
 
-# customize footer icon. see issue https://github.com/chipzoller/hugo-clarity/issues/77
+# 自定义页脚图标。请参见问题 https://github.com/chipzoller/hugo-clarity/issues/77
 # footerLogo = "icons/copy.svg"
 
-# Customize Sidebar Disclaimer Text
+# 自定义侧边栏免责声明文本
 # sidebardisclaimer = true
-# disclaimerText = "The opinions expressed on this site are my own personal opinions and do not represent my employer’s view in any way."
+# disclaimerText = "本站点上表达的观点是我个人的观点，不代表我的雇主的任何观点。"
 
-# Text for the languages menu.
-languageMenuName = "🌐"
+# 语言菜单的文本。
+languageMenuName = "🌐lang"
 
-# Title separator, default to |.
+# 标题分隔符，默认为 |。
 # titleSeparator = "|"
 
-# Enable or disable comments globally. Default to true.
+# 全局启用或禁用评论。默认为 true。
 # comments = false
 
-# Enable or disable Utterances (https://github.com/utterance/utterances) Github Issue-Based Commenting
-# utterances = true  #Run the utterances script in the single.html layout to load https://utteranc.es comments
-# utterancesRepo = "GHUsername/Repository.Name" # Utterances is enabled when this param is set
-# utterancesTheme = "github-light" # Default: github-dark
-# utterancesIssueTerm = "pathname" # Default: pathname
+# 全局启用或禁用 Utterances (https://github.com/utterance/utterances) 基于 Github 的评论
+# utterances = true  #在 single.html 布局中运行 utterances 脚本以加载 https://utteranc.es 评论
+# utterancesRepo = "GHUsername/Repository.Name" # 设置此参数时启用 Utterances
+# utterancesTheme = "github-light" # 默认值：github-dark
+# utterancesIssueTerm = "pathname" # 默认值：pathname
 
-# Maximum number of recent posts. (default: 8)
+# 最近文章的最大数量。（默认值：8）
 # numberOfRecentPosts = 8
 
-# Maximum number of featured posts. (default: 8)
+# 特色文章的最大数量。（默认值：8）
 # numberOfFeaturedPosts = 8
 
-# Pin featured posts in list.
+# 在列表中固定特色文章。
 # pinFeatured = true
 
-# Maximum number of pinned featured posts. (default: 8)
+# 固定特色文章的最大数量。（默认值：8）
 # numberOfPinnedPosts = 8
 
-# Date format. Checkout https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for details.
-# dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
-# customFonts = false # toggle to true if you want to use custom fonts only.
+# 日期格式。请查看 https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference 了解详细信息。
+# dateFormat = "2006-01-02" # 默认为 "Jan 2, 2006"。
+# customFonts = false # 切换为 true，如果您想仅使用自定义字体。
 
-# The year when ths website was created, this value is used in the copyright
-# notice of the footer.
+# 创建此网站的年份，此值用于页脚中的版权声明。
 # since = 2016
 
-# Show related content at the end of an article based on the 'series' taxonomy. Can be set in post front matter.
+# 根据“系列”分类法在文章末尾显示相关内容。可以在文章正文中设置。
 # showRelatedInArticle = false
 # showRelatedInSidebar = false
 
-# website author
+# 网站作者
 [author]
-name = "Jane Doe"
-# photo = "images/jane-doe.png" #include this if you would like to show the author photo on the sidebar
+name = "admin"
+# photo = "images/jane-doe.png" # 如果您想在侧边栏上显示作者照片，请包含此内容
 
 [plausible_analytics]
-enable = false # to enable plausible analytics set to true.
-websiteDomain = "example.com" # domain name of your website, most cases same as your base url
-# plausibleDomain = "plausible.io" # default is set to plausible.io, only required if plausible is selfhosted
-# scritpName = "plausible" # default is set to plausible, only required if using a custome name for script
+enable = false # 要启用 plausible 分析，请设置为 true。
+websiteDomain = "example.com" # 您的网站域名，在大多数情况下与您的基本 URL 相同
+# plausibleDomain = "plausible.io" # 默认设置为 plausible.io，仅在使用自托管的 plausible 时需要
+# scritpName = "plausible" # 默认设置为 plausible，仅在使用自定义脚本名称时需要
 
 [matomo_analytics]
-enable = false # To enable matomo analytics change to `true`.
-websiteDomain = "example.com" # Set the domain name of your website, in most cases same as your base URL this is required.
-matomoDomain = "matomo.example.com" # Set to Matomo domain
-matomoSiteID = "1" # Default is set to 1, change this to the siteid being tracked
+# 启用 matomo 分析，请将其更改为“true”。
+enable = false
+# 设置您网站的域名，大多数情况下与您的基本 URL 相同，这是必需的。
+websiteDomain = "example.com"
+# 设置 Matomo 域
+matomoDomain = "matomo.example.com"
+# 默认设置为 1，将其更改为正在跟踪的站点 ID
+matomoSiteID = "1"

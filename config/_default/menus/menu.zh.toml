@@ -1,0 +1,34 @@
+[[main]]
+  name = "Home"
+  url = ""
+  weight = -110
+
+[[main]]
+  name = "Archives"
+  url = "post/rich-content/"
+  weight = -109
+
+# Submenus are done this way: parent -> identifier
+[[main]]
+  name = "Link"
+  identifier = "Links"
+  weight = -108
+[[main]]
+  parent = "Links"
+  name = "baidu"
+  url = "https://baidu.com/"
+
+[[main]]
+  name = "About"
+  url = "about/"
+  weight = -107
+
+# social menu links
+[[social]]
+  name = "rss"
+  weight = 1
+  url = "index.xml"
+
+# other supported social links
+# name = "gitlab"
+# url = "https://gitlab.com/#"
