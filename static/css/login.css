@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  /* 设置字体 */
+  background-color: #f4f4f4;
+  /* 设置背景颜色 */
+}
+
+
+#submitBtn{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  float: right;
+  /* 将按钮靠右显示 */
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  /* 设置背景颜色 */
+  color: #fff;
+  /* 设置字体颜色 */
+  padding: 10px 20px;
+  /* 设置内边距 */
+  border-radius: 5px;
+  /* 设置圆角 */
+  border: none;
+  /* 去掉边框 */
+  cursor: pointer;
+  /* 设置鼠标样式 */
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+  /*设置鼠标悬停时的背景颜色 */
+}
+
+/* 添加蒙版 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 设置半透明黑色背景 */
+  z-index: 0;
+  /* 设置蒙版层级 */
+  display: none;
+  /* 默认隐藏蒙版 */
+}
+
+/* 修改表单样式 */
+.login-form {
+  width: 500px;
+  position: fixed;
+  /* 设置绝对定位 */
+  top: 50%;
+  /* 设置顶部距离为50% */
+  left: 50%;
+  /* 设置左侧距off: 50% */
+  transform: translate(-50%, -50%);
+  /* 使用transform属性将表单居中 */
+  z-index: 1;
+  /* 设置表单层级 */
+  background-color: #fff;
+  /* 设置表单背景颜色 */
+  padding: 20px;
+  /* 设置内边距 */
+  margin: 0 auto;
+  /* 设置外边距 */
+  border-radius: 5px;
+  /* 设置圆角 */
+  box-shadow: 0px 0px 10px #aaa;
+  /* 设置阴影 */
+  display: none;
+  /* 默认隐藏表单 */
+}
+
+/* 显示输入框边框 */
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  /* 设置内边距 */
+  width: 80%;
+  /* 设置宽度 */
+  border-radius: 5px;
+  /* 设置圆角 */
+  border: 1px solid #ccc;
+  /* 显示边框 */
+  margin-bottom: 20px;
+  /* 设置下边距 */
+}
+
+/* 显示label */
+label {
+  width: 130px;
+  margin-bottom: 5px;
+  /* 设置下边距 */
+  color: black;
+  /* 设置字体颜色 */
+
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: black;
+  width: 20px;
+  height: 30px;
+  font-size: 20px;
+}
+
+
+.verify {
+  width: 35%;
+  height: 35px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+}

@@ -10,7 +10,7 @@
 
 # Submenus are done this way: parent -> identifier
 [[main]]
-  name = "Link"
+  name = "Links"
   identifier = "Links"
   weight = -108
 [[main]]
@@ -19,12 +19,8 @@
   url = "https://www.linkedin.com/"
 [[main]]
   parent = "Links"
-  name = "twitter"
+  name = "Twitter"
   url = "https://twitter.com/"
-[[main]]
-  parent = "Links"
-  name = "baidu"
-  url = "https://baidu.com/"
 
 [[main]]
   name = "About"

@@ -1,0 +1,49 @@
+{{- $params := .Site.Params }}
+{{- $centerLogo := $params.centerLogo }}
+{{ $logo := $params.logo }}
+<header class="nav_header">
+  <nav class="nav">
+    {{- if $centerLogo }}
+    {{- partialCached "logo" (dict "logo" $logo "class" "nav_hide") }}
+    {{- else }}
+    {{- partialCached "logo" (dict "logo" $logo) }}
+    {{- end }}
+    <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
+      {{ $context := . }}
+      {{ $menuData := .Site.Data.menu }}
+      {{ with $menuData }}
+      {{ partial "nav" (dict "context" $context "menu" $menuData) }}
+      {{- else }}
+      {{ partial "nav" (dict "context" . "menu" .Site.Menus.main) }}
+      {{- end }}
+      {{ if .Site.IsMultiLingual }}
+      <div class="nav_parent">
+        <a href="#" class="nav_item">{{ $params.languageMenuName }}</a>
+        <div class="nav_sub">
+          <span class="nav_child"></span>
+          {{ range .Site.Home.AllTranslations }}
+          <a href="{{ .Permalink }}" class="nav_child nav_item">{{ .Language.LanguageName }}</a>
+          {{ end }}
+        </div>
+      </div>
+      {{- end }}
+      {{- if $centerLogo }}
+      {{- partial "logo" (dict "logo" $logo "class" "nav_center") }}
+      {{- end }}
+      {{- partialCached "follow" . }}
+
+      <!-- 引入 登录按钮/功能   -->
+      <a href='#' id='loginBtn' style="line-height:61px"></a>
+      {{ partial "login.html" .}}
+
+    </div>
+  </nav>
+</header>
+ <!-- 为登录表单添加样式 -->
+ <link rel='stylesheet' href='/css/login.css' type='text/css'>
+      
+ <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+ <!-- 密码添加 公钥 -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js"></script>
+
+<script type='text/javascript' src='/js/login.js'></script>

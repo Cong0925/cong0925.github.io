@@ -1,0 +1,68 @@
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ end }}
+
+{{ if eq site.Params.pinFeatured true }}
+{{ $featured := default 8 site.Params.numberOfPinnedPosts }}
+{{ $featuredPosts := first $featured (where $pages "Params.featured" true)}}
+{{ $normalPosts := $pages | symdiff $featuredPosts }}
+{{ $pages = $featuredPosts | append $normalPosts }}
+{{ end }}
+
+<!-- 根据 用户显示 文章 -->
+{{ $userName := "陈钦宇233" }}
+{{ $isLogin := "false"}}
+
+<script>
+
+  //判断 是否登录
+  if (localStorage.getItem('login') == 'true') {
+    const aa = localStorage.getItem('userName')
+    {{ $isLogin = "true" }}
+    console.log('{{ $isLogin}}' === "true")
+    console.log('$isLogin','{{ $isLogin}}',typeof('{{ $isLogin}}'))
+  }
+  else {
+    {{ $isLogin = "false" }}
+    console.log("'{{ $isLogin}}' === 'false'",'{{ $isLogin}}' === 'false')
+    console.log('$isLogin','{{ $isLogin}}')
+
+    console.log('not login')
+  }
+
+</script>
+
+<div class="grid-inverse wrap content">
+
+  {{if eq $isLogin "true"}}
+  <div id="allPosts">
+    已登录
+    <ul class="posts" id="posts">
+      <!-- 登录用户的文章显示 -->
+      {{- range (.Paginate (where .Site.RegularPages "Params.author" $userName )).Pages }}
+      {{ partial "excerpt" . }}
+      {{- end }}
+      <li>
+        {{- template "_internal/pagination.html" . }}
+      </li>
+    </ul>
+  </div>
+  {{else}}
+  <div id="allPosts">
+    未登录
+    <ul class="posts" id="posts">
+      <!-- 所有文章导入 -->
+      {{- range (.Paginate $pages).Pages }}
+      {{ partial "excerpt" . }}
+      {{- end }}
+      <li>
+        {{- template "_internal/pagination.html" . }}
+      </li>
+    </ul>
+  </div>
+  {{end}}
+
+
+  {{- partial "sidebar" . }}
+</div>

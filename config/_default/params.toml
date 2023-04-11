@@ -4,12 +4,12 @@ enableSearch = true
 # 社交媒体
 twitter = "@janedoe"
 largeTwitterCard = false # 如果要显示大的 Twitter 卡片图像，请设置为 true。默认为小的 Twitter 卡片图像
-introDescription = "技术专家，永久学生，教师，不断的渐进式改进。"
-# introURL = "about/" # 设置“阅读更多”按钮下面的 introDescription 的 URL，或将其设置为 false 以不显示该按钮
-# description = "A theme based on VMware's Clarity Design System for publishing technical blogs with Hugo." # 在此处设置您网站的元标记（SEO）描述。或者在主页内容文件中设置此描述，例如 content/_index.md。以后者设置的内容为优先。
-# keywords = ["design", "clarity", "hugo theme"] # 在此处设置您网站的元标记（SEO）关键字。或者在主页内容文件中设置这些关键字，例如 content/_index.md。以后者设置的内容为优先。
+introDescription = "技术专家，永久学生，教师，不断增量改进。"
+# introURL = "about/" # 设置“阅读更多”按钮下面的 url，或将其设置为 false 以不显示该按钮
+# description = "A theme based on VMware's Clarity Design System for publishing technical blogs with Hugo." # 在此处设置您网站的元标记（SEO）描述。或者在主页内容文件（例如 content/_index.md）中设置此描述。以后者设置的为准。
+# keywords = ["design", "clarity", "hugo theme"] # 在此处设置您网站的元标记（SEO）关键字。或者在主页内容文件（例如 content/_index.md）中设置这些关键字。以后者设置的为准。
 
-# showShare = false # 取消注释以在每篇文章上不显示共享按钮。也可在每篇文章的前置元数据中使用。
+# showShare = false # 取消注释以在每篇文章上不显示共享按钮。也可在每篇文章的前置元数据中设置。
 
 # Google 分析 ID
 ga_analytics = ""
@@ -20,20 +20,19 @@ google_tag_manager_id = ""
 # 百度分析 ID
 # baidu_analytics = "XXXXXXXX"
 
-# 默认情况下限制在每个页面的侧边栏上显示的分类链接数。
-numberOfTagsShown = 14 # 适用于所有其他默认和自定义分类法。例如类别、品牌，请参见 https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
+# 默认情况下限制侧边栏上显示的分类链接数。
+numberOfTagsShown = 14 # 适用于所有其他默认和自定义分类。例如，类别、品牌等，请参见 https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
 
-# 是否默认将图像和其他资产存储在“静态”目录中，或使用 Hugo 页面包。
+# 是否默认将图像和其他资源存储在“static”目录中，或使用 Hugo 页面包。
 # 如果您想将资产与帖子本身分组（作为“叶子包”），请切换为“true”。
-# 这可以在页面级别上覆盖；如果没有设置页面级别变量，则下面设置的内容将作为默认值。
-# 有关页面包的详细信息：https://gohugo.io/content-management/page-bundles/#leaf-bundles
+# 这可以在页面级别上覆盖；如果没有设置页面变量，则下面设置的内容不会被更改。
 usePageBundles = false
 
 # 路径变量
 #
-# 默认情况下，这些目录都是“静态”目录的子目录。
+# 默认情况下，这些目录都是“static”目录的子目录。
 #
-# 在某些 Apache 服务器安装中，这些目录名称可能会发生冲突，您可能希望更改它们。请参见：
+# 在某些 Apache 服务器安装中，这些目录名称可能会冲突，您可能希望更改它们。请参见：
 # https://github.com/chipzoller/hugo-clarity/issues/74
 #
 # 如果更改这些目录的名称，请务必复制原始内容以获取包含在 Hugo Clarity 中的文件。
@@ -48,10 +47,10 @@ fontsDir = "fonts/" # 没有前导正斜杠
 # 社交媒体共享图像：当给定页面没有其他图像时，将在 Twitter、Facebook、LinkedIn 等上使用。
 fallBackOgImage = "images/thumbnail.png"
 
-# Logo image
+# Logo 图像
 logo = "logos/logo.png"
 
-# center logo on navbar
+# 在导航栏上居中 Logo
 centerLogo = false # 设置为“true”以居中，设置为“false”以左对齐。
 
 # 设置每个代码块的最大行数。但是，代码块将是可滚动和可扩展的。
@@ -68,13 +67,13 @@ mainSections = ["post"] # 详细信息请参见 https://gohugo.io/functions/wher
 
 # 在文章正文中标记非内联图像
 figurePositionShow = false # 全局切换打开或关闭
-# 您可以在每篇文章中使用相同的变量切换此行为打开或关闭
+# 您可以在文章的前置元数据中使用相同的变量，以在每个页面上切换此行为打开或关闭
 figurePositionLabel = "Figure" # 图像编号前的文本，例如 Figure 1.0
 
 # 将折叠的移动导航设置为从左侧或右侧出现
 mobileNavigation = "left" # 如果您喜欢右侧，请更改为“right”
 
-# 一些网站所有者希望决定他们希望如何向用户介绍他们的网站。这些设置为您作为网站所有者决定用户将如何首次查看您的网站。
+# 一些网站所有者希望决定他们希望如何向用户介绍他们的网站。这些设置为您作为网站所有者决定用户将如何首次查看您的站点。
 
 # 请注意，您不能同时强制执行两种模式。即通过强制执行一种模式，您优先考虑它（通过将其设置为 true）。enforceDarkMode 将被注释掉
 
@@ -91,7 +90,7 @@ enforceLightMode = false
 # disclaimerText = "本站点上表达的观点是我个人的观点，不代表我的雇主的任何观点。"
 
 # 语言菜单的文本。
-languageMenuName = "🌐lang"
+languageMenuName = "🌐"
 
 # 标题分隔符，默认为 |。
 # titleSeparator = "|"
@@ -105,16 +104,16 @@ languageMenuName = "🌐lang"
 # utterancesTheme = "github-light" # 默认值：github-dark
 # utterancesIssueTerm = "pathname" # 默认值：pathname
 
-# 最近文章的最大数量。（默认值：8）
+# 最近文章的最大数量。 (默认值：8)
 # numberOfRecentPosts = 8
 
-# 特色文章的最大数量。（默认值：8）
+# 特色文章的最大数量。 (默认值：8)
 # numberOfFeaturedPosts = 8
 
 # 在列表中固定特色文章。
 # pinFeatured = true
 
-# 固定特色文章的最大数量。（默认值：8）
+# 固定特色文章的最大数量。 (默认值：8)
 # numberOfPinnedPosts = 8
 
 # 日期格式。请查看 https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference 了解详细信息。
@@ -122,16 +121,11 @@ languageMenuName = "🌐lang"
 # customFonts = false # 切换为 true，如果您想仅使用自定义字体。
 
 # 创建此网站的年份，此值用于页脚中的版权声明。
-since = 2023
+# since = 2016
 
-# 根据“系列”分类法在文章末尾显示相关内容。可以在文章正文中设置。
+# 根据“系列”分类在文章末尾显示相关内容。可以在文章前置元数据中设置。
 # showRelatedInArticle = false
 # showRelatedInSidebar = false
-
-# 网站作者
-[author]
-name = "admin"
-photo = "images/jane-doe.png" # 如果您想在侧边栏上显示作者照片，请包含此内容
 
 [plausible_analytics]
 enable = false # 要启用 plausible 分析，请设置为 true。
@@ -140,11 +134,26 @@ websiteDomain = "example.com" # 您的网站域名，在大多数情况下与您
 # scritpName = "plausible" # 默认设置为 plausible，仅在使用自定义脚本名称时需要
 
 [matomo_analytics]
-# 启用 matomo 分析，请将其更改为“true”。
+# 启用 matomo 分析。将其更改为“true”以启用。
 enable = false
-# 设置您网站的域名，大多数情况下与您的基本 URL 相同，这是必需的。
+# 您的网站域名，在大多数情况下与您的基本 URL 相同，这是必需的。
 websiteDomain = "example.com"
-# 设置 Matomo 域
+# 设置为 Matomo 域。
 matomoDomain = "matomo.example.com"
-# 默认设置为 1，将其更改为正在跟踪的站点 ID
+# 默认设置为 1，将其更改为正在跟踪的站点 ID。
 matomoSiteID = "1"
+
+
+# 网站作者 
+[author]
+name = "Admin"
+# photo = "images/jane-doe.png" # 如果您想在侧边栏上显示作者照片，请包含此内容
+
+# [apiBaseUrl]
+# apiBaseUrl = 'https://api.innovate.quwancode.com/api_1_0'
+
+
+[user]
+isLogin  = true
+userName = 'aaa'
+userinfo = []

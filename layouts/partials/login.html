@@ -1,0 +1,43 @@
+{{/* 定义一个名为 "username" 的全局变量 */}}
+{{ $username := "" }}
+
+{{/* 定义一个名为 "password" 的全局变量 */}}
+{{ $password := "" }}
+
+<style>
+  #submitBtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    float: right;
+    /* 将按钮靠右显示 */
+  }
+</style>
+<!-- 创建登录表单 -->
+<form id="login-form" class="login-form">
+  <div class="close-button" id='closeBtn'>X</div>
+
+  <h2>Login</h2> <!-- 添加标题 -->
+  <label for="username">Username:</label> <!-- 添加用户名标签 -->
+  <input type="text" id="username" value="{{ $username }}" placeholder="用户名" required> <!-- 添加密码输入框 -->
+
+  <label for="password">Password:</label> <!-- 添加密码标签 -->
+  <input type="password" id="password" value="{{ $password }}" placeholder="密码" required> 添加密码输入框
+
+  <div class="container">
+    <label for="inputCode">验证码:</label> <!-- 添加密码标签 -->
+    <input type="text" id="inputCode" placeholder="请输入验证码" required>
+    <img id="myImg" class="verify" onclick="getverigy()" :src="" title="Example Image">
+  </div>
+  <button type="button" id="submitBtn" class="aaa">登录</button>
+</form>
+<!-- 添加蒙版 -->
+<div class="overlay" id='overlay'></div>
+
+<div id="exit_login" class="login-form">
+  <h1>确定退出登录？</h1>
+</div>

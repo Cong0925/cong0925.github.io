@@ -1,13 +1,11 @@
 [en]
   title = "Clarity"
   LanguageName = "English"
-  weight = 2
-
-[zh]
-  title = "Clarity-清晰"
-  LanguageName = "中文"
   weight = 1
 
-
+[zh]
+  title = "清晰"
+  LanguageName = "中文"
+  weight = 2
 
   # tip: assign the default language the lowest Weight
