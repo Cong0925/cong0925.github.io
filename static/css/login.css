@@ -1,12 +1,7 @@
-body {
-  font-family: Arial, sans-serif;
-  /* 设置字体 */
-  background-color: #f4f4f4;
-  /* 设置背景颜色 */
-}
+body {}
 
 
-#submitBtn{
+#submitBtn {
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
@@ -53,32 +48,73 @@ input[type="submit"]:hover {
   /* 默认隐藏蒙版 */
 }
 
-/* 修改表单样式 */
-.login-form {
-  width: 500px;
-  position: fixed;
-  /* 设置绝对定位 */
-  top: 50%;
-  /* 设置顶部距离为50% */
-  left: 50%;
-  /* 设置左侧距off: 50% */
-  transform: translate(-50%, -50%);
-  /* 使用transform属性将表单居中 */
-  z-index: 1;
-  /* 设置表单层级 */
-  background-color: #fff;
-  /* 设置表单背景颜色 */
-  padding: 20px;
-  /* 设置内边距 */
-  margin: 0 auto;
-  /* 设置外边距 */
-  border-radius: 5px;
-  /* 设置圆角 */
-  box-shadow: 0px 0px 10px #aaa;
-  /* 设置阴影 */
-  display: none;
-  /* 默认隐藏表单 */
+@media only screen and (max-width: 500px) {
+
+  /* 修改表单样式 */
+  .login-form {
+    width: 100%;
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    transform: none;
+    z-index: 1;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #aaa;
+    display: none;
+  }
 }
+@media only screen and ((min-width: 500px) and (max-width:770px)) {
+  /* 修改表单样式 */
+  .login-form {
+    width: 100%;
+    position: fixed;
+    top: 30%;
+    left: 55%;
+    transform: none;
+    z-index: 1;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #aaa;
+    display: none;
+  }
+}
+@media only screen and (min-width: 770px) {
+
+  /* 修改表单样式 */
+  .login-form {
+    width: 500px;
+    position: fixed;
+    /* 设置绝对定位 */
+    top: 50%;
+    /* 设置顶部距离为50% */
+    left: 50%;
+    /* 设置左侧距off: 50% */
+    transform: translate(-50%, -50%);
+    /* 使用transform属性将表单居中 */
+    z-index: 1;
+    /* 设置表单层级 */
+    background-color: #fff;
+    /* 设置表单背景颜色 */
+    padding: 20px;
+    /* 设置内边距 */
+    margin: 0 auto;
+    /* 设置外边距 */
+    border-radius: 5px;
+    /* 设置圆角 */
+    box-shadow: 0px 0px 10px #aaa;
+    /* 设置阴影 */
+    display: none;
+    /* 默认隐藏表单 */
+  }
+}
+
+
+
 
 /* 显示输入框边框 */
 input[type="text"],

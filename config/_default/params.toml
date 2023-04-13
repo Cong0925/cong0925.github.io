@@ -80,7 +80,6 @@ mobileNavigation = "left" # 如果您喜欢右侧，请更改为“right”
 # 请注意，模式切换 UI 将保持不变。这样，如果用户喜欢暗模式，他们可以随心所欲。
 
 enforceLightMode = false
-# enforceDarkMode = false
 
 # 自定义页脚图标。请参见问题 https://github.com/chipzoller/hugo-clarity/issues/77
 # footerLogo = "icons/copy.svg"

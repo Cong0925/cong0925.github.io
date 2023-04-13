@@ -101,6 +101,9 @@
         // 登录成功，更新全局变量
         localStorage.setItem('login', true);
         localStorage.setItem('userName', res.data.user_name);
+        localStorage.setItem('userIntroduce'.res.data.userIntroduce)
+        alert(res.data.userIntroduce)
+        
         loginBtnValue()
         console.log(res)
 
@@ -146,6 +149,7 @@
   // 显示登录窗口
   const $loginBtn = document.getElementById('loginBtn');
   $loginBtn.addEventListener('click', function showDialog() {
+    // 退出登录 
     if (localStorage.getItem('login') === 'true') {
       if (confirm("你想要退出登陆吗?")) {
         // 用户选择了“确定”

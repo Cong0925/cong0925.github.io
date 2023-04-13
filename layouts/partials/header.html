@@ -1,21 +1,28 @@
 {{- $params := .Site.Params }}
 {{- $centerLogo := $params.centerLogo }}
 {{ $logo := $params.logo }}
+
 <header class="nav_header">
   <nav class="nav">
+    <!-- logo 加载 -->
     {{- if $centerLogo }}
     {{- partialCached "logo" (dict "logo" $logo "class" "nav_hide") }}
     {{- else }}
     {{- partialCached "logo" (dict "logo" $logo) }}
     {{- end }}
+
     <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
       {{ $context := . }}
       {{ $menuData := .Site.Data.menu }}
+      
+      <!-- 头部菜单 获取 config/menus文件里 -->
       {{ with $menuData }}
       {{ partial "nav" (dict "context" $context "menu" $menuData) }}
       {{- else }}
       {{ partial "nav" (dict "context" . "menu" .Site.Menus.main) }}
       {{- end }}
+
+      <!-- 头部语言选择部分 -->
       {{ if .Site.IsMultiLingual }}
       <div class="nav_parent">
         <a href="#" class="nav_item">{{ $params.languageMenuName }}</a>
@@ -27,23 +34,42 @@
         </div>
       </div>
       {{- end }}
+      
       {{- if $centerLogo }}
       {{- partial "logo" (dict "logo" $logo "class" "nav_center") }}
       {{- end }}
+
       {{- partialCached "follow" . }}
 
-      <!-- 引入 登录按钮/功能   -->
-      <a href='#' id='loginBtn' style="line-height:61px"></a>
-      {{ partial "login.html" .}}
+
+
+      <div class="dropdown">
+        <!-- 引入 登录按钮/功能   -->
+        <a href='#' id='loginBtn' style="line-height:61px" ></a>
+      {{ partial "settingList.html" .}}
+
+      </div>
+
+      <!-- 正常登录 -->
+      <!-- {{ partial "login.html" .}} -->
+
+      <!-- 简单登录 -->
+      {{ partial "loginMock.html" .}}
+
 
     </div>
   </nav>
 </header>
- <!-- 为登录表单添加样式 -->
- <link rel='stylesheet' href='/css/login.css' type='text/css'>
-      
- <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
- <!-- 密码添加 公钥 -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js"></script>
+<!-- 为登录表单添加样式 -->
+<link rel='stylesheet' href='/css/login.css' type='text/css'>
 
-<script type='text/javascript' src='/js/login.js'></script>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<!-- 密码添加 公钥 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js"></script>
+
+<!-- 用户名 密码 验证码 -->
+<!-- <script type='text/javascript' src='/js/login.js'></script> -->
+
+<!-- mock 简单登录 -->
+<script type='text/javascript' src='/js/loginMock.js'></script>
+
